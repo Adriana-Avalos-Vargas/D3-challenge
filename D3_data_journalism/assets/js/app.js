@@ -90,7 +90,7 @@ var chartGroup = svg.append("g")
 
       var mousemove = function(d) {
       tooltip
-        .html(d.state)
+        .html(`${d.state} <hr>Smoking ${d.smokes}(%)<br>Mean age: ${d.age} years<br>Mean income ${d.income}<br>Obesity ${d.obesity} (%)`)
         .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
         .style("top", (d3.mouse(this)[1]) + "px")
        }
